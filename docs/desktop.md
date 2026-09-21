@@ -14,7 +14,7 @@ chmod +x Heaper-*-x86_64.AppImage
 ./Heaper-*-x86_64.AppImage
 ```
 
-If FUSE is unavailable, Electron/AppImage builds often accept `--appimage-extract-and-run`.
+AppImage needs FUSE (`fuse` package on Debian/Ubuntu, which provides `fusermount`). If FUSE is unavailable, run with `--appimage-extract-and-run` instead. On some sandboxed environments you may also need `--no-sandbox`.
 
 ## Other platforms
 
