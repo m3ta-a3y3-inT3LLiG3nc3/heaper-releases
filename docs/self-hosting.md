@@ -84,7 +84,6 @@ For another machine on the network, use `http://YOUR-SERVER:3010` or your revers
 
 ```bash
 docker compose ps
-docker inspect --format='{{.State.Health.Status}}' "$(docker compose ps -q heaper)"
 ```
 
 ### Follow logs
@@ -98,7 +97,7 @@ docker compose logs -f heaper
 ```bash
 curl http://localhost:3010/api
 curl http://localhost:3010/sync/health
-docker compose exec heaper pg_isready -h localhost -U "${POSTGRES_USER:-heaper}"
+docker compose exec heaper sh -lc 'pg_isready -h localhost -U "$POSTGRES_USER"'
 ```
 
 ### Restart or stop

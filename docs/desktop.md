@@ -43,10 +43,10 @@ chmod +x ~/Applications/Heaper-*-arm64.AppImage
 
 ### FUSE prerequisite
 
-AppImage usually needs FUSE support. Check for `fusermount` first:
+AppImage usually needs FUSE support. Check for `fusermount` or `fusermount3` first:
 
 ```bash
-command -v fusermount || echo "Install your distro's FUSE package before launching the AppImage."
+command -v fusermount || command -v fusermount3 || echo "Install your distro's FUSE package before launching the AppImage."
 ```
 
 Examples only; package names vary by distribution:
