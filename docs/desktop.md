@@ -49,14 +49,14 @@ AppImage usually needs FUSE support. Check for `fusermount` or `fusermount3` fir
 command -v fusermount || command -v fusermount3 || echo "Install your distro's FUSE package before launching the AppImage."
 ```
 
-Examples only; package names vary by distribution:
+Example for Debian/Ubuntu; install `fuse` plus the libfuse2 package name used by your release:
 
 ```bash
-# Debian/Ubuntu example
-sudo apt update && sudo apt install -y fuse libfuse2
+sudo apt update
+sudo apt install -y fuse libfuse2
 
-# Newer Ubuntu releases may use libfuse2t64 instead
-sudo apt update && sudo apt install -y fuse libfuse2t64
+# On newer Ubuntu releases, replace libfuse2 with libfuse2t64:
+sudo apt install -y fuse libfuse2t64
 ```
 
 ### If FUSE is unavailable

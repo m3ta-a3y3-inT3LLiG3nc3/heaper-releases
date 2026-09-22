@@ -156,13 +156,13 @@ docker compose up -d
 
 ```bash
 docker compose stop
-mv heaper-data heaper-data.old
+if [ -d heaper-data ]; then mv heaper-data "heaper-data.pre-restore.$(date +%s)"; fi
 tar -xzf heaper-backup-YYYY-MM-DD.tar.gz
 
 docker compose up -d
 ```
 
-After you verify the restored instance, remove `heaper-data.old` if you no longer need it.
+After you verify the restored instance, remove the timestamped `heaper-data.pre-restore.*` directory if you no longer need it.
 
 ## Networking, firewall, reverse proxy, and TLS
 
