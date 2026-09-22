@@ -144,7 +144,7 @@ Use the server hostname or IP address that the desktop machine can actually reac
 
 Under **Settings → Heaps → Pull Heap**:
 
-- Use `hostname:3010` or `http://hostname:3010` when you are connecting directly to the checked-in compose setup.
+- Use `http://hostname:3010` when you are connecting directly to the checked-in compose setup.
 - Use your public HTTPS URL when a reverse proxy terminates TLS in front of Heaper.
 - Do **not** append `:3010` when your reverse proxy already serves Heaper on `443`.
 
