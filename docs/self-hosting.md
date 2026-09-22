@@ -261,6 +261,10 @@ From the desktop machine, run:
 ```bash
 curl http://YOUR-SERVER:3010/api
 curl http://YOUR-SERVER:3010/sync/health
+
+# If you connect through a reverse proxy with TLS:
+curl https://heaper.example.com/api
+curl https://heaper.example.com/sync/health
 ```
 
 If direct HTTP works but HTTPS does not, fix your reverse proxy or TLS certificate first.

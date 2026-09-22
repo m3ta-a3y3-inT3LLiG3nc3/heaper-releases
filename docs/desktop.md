@@ -161,6 +161,10 @@ Run these from the desktop machine or another client on the same network:
 ```bash
 curl http://YOUR-SERVER:3010/api
 curl http://YOUR-SERVER:3010/sync/health
+
+# If you use a reverse proxy with TLS instead:
+curl https://heaper.example.com/api
+curl https://heaper.example.com/sync/health
 ```
 
 Expected results:
