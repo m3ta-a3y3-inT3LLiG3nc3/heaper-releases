@@ -122,7 +122,7 @@ Verified macOS release artifacts are DMG and ZIP builds for both Intel and Apple
 Typical flow:
 
 1. Download the matching `*.dmg`.
-2. Open it in Finder and follow the install prompt it presents.
+2. Open the DMG in Finder, then drag the Heaper app into `Applications` if the mounted window shows the usual app-and-Applications layout.
 3. If macOS blocks first launch, use Finder's **Open** action on the app after verifying it came from the official release page.
 
 ## First launch and login

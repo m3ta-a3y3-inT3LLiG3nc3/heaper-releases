@@ -160,7 +160,6 @@ docker compose up -d
 ```bash
 docker compose stop
 mv heaper-data heaper-data.old
-mkdir -p heaper-data
 tar -xzf heaper-backup-YYYY-MM-DD.tar.gz
 
 docker compose up -d
