@@ -65,9 +65,8 @@ Run the AppImage without mounting it:
 
 ```bash
 ~/Applications/Heaper-*-x86_64.AppImage --appimage-extract-and-run
+~/Applications/Heaper-*-arm64.AppImage --appimage-extract-and-run
 ```
-
-Use the ARM64 filename instead on ARM64 systems.
 
 ### Common Linux troubleshooting
 

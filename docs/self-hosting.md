@@ -98,10 +98,8 @@ docker compose logs -f heaper
 ```bash
 curl http://localhost:3010/api
 curl http://localhost:3010/sync/health
-docker compose exec heaper pg_isready -h localhost -U heaper
+docker compose exec heaper pg_isready -h localhost -U "${POSTGRES_USER:-heaper}"
 ```
-
-If you changed `POSTGRES_USER`, use that value instead of `heaper` in the `pg_isready` command.
 
 ### Restart or stop
 
