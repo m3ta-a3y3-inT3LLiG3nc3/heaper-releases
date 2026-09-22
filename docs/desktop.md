@@ -46,20 +46,27 @@ chmod +x ~/Applications/Heaper-*-arm64.AppImage
 AppImage usually needs FUSE support. Check for `fusermount` or `fusermount3` first:
 
 ```bash
-command -v fusermount || command -v fusermount3 || echo "Install your distro's FUSE package before launching the AppImage."
+if command -v fusermount >/dev/null || command -v fusermount3 >/dev/null; then
+  echo "FUSE helper found."
+else
+  echo "Install your distro's FUSE package before launching the AppImage."
+fi
 ```
 
-Example for Debian/Ubuntu; install `fuse` plus the libfuse2 package name used by your release:
+Examples for Debian/Ubuntu; choose the command that matches your release and run only one of them:
 
 ```bash
 sudo apt update
-sudo apt install -y fuse <libfuse-package>
+sudo apt install -y fuse libfuse2
 ```
 
-Replace `<libfuse-package>` with:
+```bash
+sudo apt update
+sudo apt install -y fuse libfuse2t64
+```
 
-- `libfuse2` on older Debian/Ubuntu releases
-- `libfuse2t64` on newer Ubuntu releases
+- Use the `libfuse2` command on older Debian/Ubuntu releases.
+- Use the `libfuse2t64` command on newer Ubuntu releases.
 
 ### If FUSE is unavailable
 
