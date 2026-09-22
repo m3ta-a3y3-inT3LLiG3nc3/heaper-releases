@@ -56,7 +56,7 @@ Examples only; package names vary by distribution:
 sudo apt update && sudo apt install -y fuse libfuse2
 
 # Newer Ubuntu releases may use libfuse2t64 instead
-sudo apt update && sudo apt install -y libfuse2t64
+sudo apt update && sudo apt install -y fuse libfuse2t64
 ```
 
 ### If FUSE is unavailable
