@@ -54,9 +54,7 @@ Example for Debian/Ubuntu; install `fuse` plus the libfuse2 package name used by
 ```bash
 sudo apt update
 sudo apt install -y fuse libfuse2
-
-# On newer Ubuntu releases, replace libfuse2 with libfuse2t64:
-sudo apt install -y fuse libfuse2t64
+# On newer Ubuntu releases, replace libfuse2 with libfuse2t64 instead of installing both packages.
 ```
 
 ### If FUSE is unavailable
