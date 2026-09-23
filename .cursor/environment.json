@@ -4,8 +4,8 @@
   "start": "bash .cursor/start.sh",
   "terminals": [
     {
-      "name": "heaper-logs",
-      "command": "cd \"$(git rev-parse --show-toplevel)\"; until sudo docker inspect heaper >/dev/null 2>&1; do sleep 2; done; sudo docker compose logs -f"
+      "name": "heaper",
+      "command": "bash .cursor/start.sh; cd \"$(git rev-parse --show-toplevel 2>/dev/null || echo /workspace)\"; exec sudo docker compose logs -f"
     }
   ],
   "ports": [3010]
