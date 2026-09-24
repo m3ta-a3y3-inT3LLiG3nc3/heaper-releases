@@ -1,0 +1,12 @@
+{
+  "name": "Heaper self-host",
+  "install": "bash .cursor/install.sh",
+  "start": "bash .cursor/start.sh",
+  "terminals": [
+    {
+      "name": "heaper",
+      "command": "bash .cursor/start.sh; cd \"$(git rev-parse --show-toplevel 2>/dev/null || echo /workspace)\"; exec sudo docker compose logs -f"
+    }
+  ],
+  "ports": [3010]
+}
